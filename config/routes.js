@@ -46,6 +46,9 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
   '/test': {
-    view: 'test'
+    view: 'test',
+	locals:{
+		title:'testpage'
+	},
   }
 };

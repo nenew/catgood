@@ -46,7 +46,12 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
   '/test': {
-    view: 'test'
-	{title:'testpage'}
-  }
+    view: 'test',
+	locals:{
+		title:'testpage'
+		},
+	},
+
+   '/:viewtest':{view:'viewtest',controller:'ViewtestController',action:'viewtest'},
+	'/aa':{controller:'AaController',action:'hi'}
 };

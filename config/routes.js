@@ -49,6 +49,9 @@ module.exports.routes = {
     view: 'test',
 	locals:{
 		title:'testpage'
+		},
 	},
-  }
+
+   '/viewtest':{controller:'ViewtestController',action:'viewtest'},
+	'/aa':{controller:'AaController',action:'hi'}
 };

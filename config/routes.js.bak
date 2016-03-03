@@ -52,6 +52,6 @@ module.exports.routes = {
 		},
 	},
 
-   '/:viewtest':{view:'viewtest',controller:'ViewtestController',action:'viewtest'},
-	'/aa':{controller:'AaController',action:'hi'}
+   '/viewtest':{controller:'ViewtestController',action:'viewtest'},
+	'/aa':{controller:'AaController',action:'hi'},
 };

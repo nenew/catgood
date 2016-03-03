@@ -14,7 +14,7 @@ module.exports = {
 	email:{
 		type:'string'
 	}
-  },
+  };
   
   
   check:function(inputs,cb){

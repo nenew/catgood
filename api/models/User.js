@@ -24,6 +24,12 @@ module.exports = {
 		name:inputs.name
 	})
 	.exec(cb);
+  },
+  creat:function(inputs,cb){
+  	User.create({
+  		name:inputs.name,
+  		email:inputs.email
+  	}).exec(cb);
   }
 };
 

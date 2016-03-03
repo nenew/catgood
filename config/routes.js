@@ -54,5 +54,7 @@ module.exports.routes = {
 
    '/viewtest':{controller:'ViewtestController',action:'viewtest'},
 	'/aa':{controller:'AaController',action:'hi'},
-	'/user':{controller:'UserController',action:'hi'}
+	/*'/user':{controller:'UserController',action:'hi'},
+  'GET /user':{view:'form'},*/
+  'POST /user':{controller:'UserController',action:'creat'}
 };

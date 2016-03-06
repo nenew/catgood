@@ -56,5 +56,6 @@ module.exports.routes = {
 	'/aa':{controller:'AaController',action:'hi'},
 	/*'/user':{controller:'UserController',action:'hi'},
   'GET /user':{view:'form'},*/
-  'POST /user':{controller:'UserController',action:'creat'}
+  'POST /user':{controller:'UserController',action:'creat'},
+  '/indexdep':{view:'indexdep',locals:{title:'猫谷网'},}
 };

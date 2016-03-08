@@ -57,5 +57,6 @@ module.exports.routes = {
 	/*'/user':{controller:'UserController',action:'hi'},
   'GET /user':{view:'form'},*/
   'POST /user':{controller:'UserController',action:'creat'},
-  '/indexdep':{view:'indexdep',locals:{title:'猫谷网'},}
+  '/indexdep':{view:'indexdep',locals:{title:'猫谷网'},},
+  '/home':{view:'homeview',locals:{layout:'homelayout'},},
 };

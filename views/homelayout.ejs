@@ -6,23 +6,75 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link href="/css/metro.css" rel="stylesheet">
 	<link href="/css/metro-responsive.css" rel="stylesheet">
+	<link href="/css/metro-icons.css" rel="stylesheet">
   	<link href="/css/metro-schemes.css" rel="stylesheet">
   	<link href="/css/home.css" rel="stylesheet">
 </head>
-<body class="container page-content bg-grayLighter">
-	<div class='header bg-darkCyan fg-white fixed-top'>
+<body class="container page-content">
+	<div class='header fg-white fixed-top'>
 	<div class="container">
 		<h1>猫谷网</h1>
-		<div class="menu">
-			<ul class="f-menu bg-darkCyan">
-				<li>首页</li>
-				<li>养猫经验</li>
-				<li>品种介绍</li>
-				<li>待售猫咪</li>
-				<li>在线商城</li>
-				<li>关于我们</li>
-			</ul>
-		</div>
+		<div data-role="appbar" class="app-bar" -data-flexclean="true">
+
+                    <a class="app-bar-element branding">猫谷网</a>
+
+                    <ul class="app-bar-menu">
+                        <li><a href="">首頁</a></li>
+                        <li>
+                            <a class="dropdown-toggle" href="">品种介绍</a>
+                            <ul data-role="dropdown" class="d-menu">
+                                <li><a href="">Windows 10</a></li>
+                                <li><a href="">Spartan</a></li>
+                                <li><a href="">Outlook</a></li>
+                                <li><a href="">Office 2015</a></li>
+                                <li class="divider"></li>
+                                <li><a class="dropdown-toggle" href="">Other Products</a>
+                                    <ul data-role="dropdown" class="d-menu">
+                                        <li><a onclick="console.log('hi'); return true;" target="_blank" href="http://microsoft.com" data-hotkey="alt+3">Internet Explorer 10</a></li>
+                                        <li><a href="">Skype</a></li>
+                                        <li><a href="">Surface</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="">养猫经验</a></li>
+                        <li><a href="">待售猫咪</a></li>
+                        <li><a href="">在线商城</a></li>
+                        <li><a href="">关于我们</a></li>
+                    </ul>
+                    <div class="app-bar-pullbutton automatic"></div>
+					<div class="app-bar-element place-right">
+                            <a class="dropdown-toggle fg-white"><span class="mif-enter"></span> 登陆</a>
+                            <div data-no-close="true" data-role="dropdown" class="app-bar-drop-container bg-white fg-dark place-right">
+                                <div class="padding20">
+                                    <form>
+                                        <h4 class="text-light">登陆猫谷网</h4>
+                                        <div class="input-control text">
+                                            <span class="mif-user prepend-icon"></span>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-control text">
+                                            <span class="mif-lock prepend-icon"></span>
+                                            <input type="password">
+                                        </div>
+                                        <label class="input-control checkbox small-check">
+                                            <input type="checkbox">
+                                            <span class="check"></span>
+                                            <span class="caption">记住密码</span>
+                                        </label>
+                                        <div class="form-actions">
+                                            <button class="button">登陆</button>
+                                            <button class="button">取消</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="app-bar-element place-right"><a class="fg-white"><span class="mif-user"></span> 注册</a></div>
+
+        </div>
+
 	</div>
 	</div>
 

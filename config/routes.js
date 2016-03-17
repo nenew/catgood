@@ -60,4 +60,5 @@ module.exports.routes = {
   '/indexdep':{view:'indexdep',locals:{title:'猫谷网'},},
   '/home':{view:'homeview',locals:{layout:'homelayout'},},
   '/new':{view:'newview',locals:{layout:'newlayout'},},
+  '/new/:url':'newpost.showUrl',
 };

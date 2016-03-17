@@ -61,4 +61,7 @@ module.exports.routes = {
   '/home':{view:'homeview',locals:{layout:'homelayout'},},
   '/new':{view:'newview',locals:{layout:'newlayout'},},
   '/new/:url':'newpost.showUrl',
+  '/post/:postname':'post.getpost',
+  'POST /post':'post.postpost',
+  'GET /post':{view:'postview'},
 };

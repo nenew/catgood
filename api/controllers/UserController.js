@@ -24,6 +24,15 @@ module.exports = {
   		if (err) return res.negotiate(err);
   		return res.send(user.name + " with "+ user.email + "has been created!")
   	})
+  },
+
+  postupdate:function(req,res){
+    User.postupdate(
+      {
+        name:req.param('name'),
+        post:req.param('post')
+  })
   }
+
 };
 

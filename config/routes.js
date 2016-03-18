@@ -64,4 +64,5 @@ module.exports.routes = {
   '/post/:postname':'post.getpost',
   'POST /post':'post.postpost',
   'GET /post':{view:'postview'},
+  'POST /postupdate':'user.postupdate',
 };

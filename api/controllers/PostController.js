@@ -5,7 +5,7 @@ module.exports = {
   		name:req.params.postname,
   	},function(err,post){
   		if (err) return res.negotiate(err);
-  		return res.send(post.name + " </p>"+ post.content )
+  		return res.send(post.toJSON() )
   	})
   },
   postpost:function(req,res){

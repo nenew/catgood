@@ -5,31 +5,46 @@
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
-module.exports = {
+ module.exports = {
 
-  attributes: {
-	name:{
-		type:'string'
-	},
-	email:{
-		type:'string'
-	}
-  },
-  
-  
-  check:function(inputs,cb){
-  
-	User.findOne({
-	
-		name:inputs.name
-	})
-	.exec(cb);
-  },
-  creat:function(inputs,cb){
-  	User.create({
-  		name:inputs.name,
-  		email:inputs.email
-  	}).exec(cb);
-  }
-};
+ 	attributes: {
+ 		name:{
+ 			type:'string'
+ 		},
+ 		email:{
+ 			type:'string'
+ 		},
+ 		posts:{
+ 			collection: 'post',
+ 			via: 'users',
+ 			dominant: true
+ 		}
+ 	},
+
+
+ 	check:function(inputs,cb){
+
+ 		User.findOne({
+
+ 			name:inputs.name
+ 		})
+ 		.exec(cb);
+ 	},
+ 	creat:function(inputs,cb){
+ 		User.create({
+ 			name:inputs.name,
+ 			email:inputs.email
+ 		}).exec(cb);
+ 	},
+
+ 	postupdate:function(inputs){
+ 		User.findOne({
+ 			name:inputs.name
+ 		}).exec(function(err,user){
+ 			user.posts.add(Post.findOne({name:inputs.post}).exec(function(err,p){return p.id}))
+ 		})
+ 	}
+
+
+ };
 

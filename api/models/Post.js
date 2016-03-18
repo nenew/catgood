@@ -6,6 +6,10 @@ module.exports = {
 		},
 		content:{
 			type:'string'
+		},
+		users:{
+			collection: 'user',
+			via: 'posts',
 		}
 	},
 
@@ -20,4 +24,12 @@ module.exports = {
 			name:inputs.name
 		}).exec(cb);
 	},
+
+
+    toJSON: function() {
+      var obj = this.toObject();
+      return obj;
+    },
+
+
 };
